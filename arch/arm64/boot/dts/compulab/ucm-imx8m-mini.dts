@@ -15,6 +15,7 @@
 /dts-v1/;
 
 #include "../freescale/fsl-imx8mm.dtsi"
+#include "sb-ucm-imx8-rev2.dtsi"
 
 / {
 	model = "CompuLab UCM i.MX8MM board";
@@ -247,28 +248,6 @@
 				MX8MM_IOMUXC_GPIO1_IO14_CCMSRCGPCMIX_CLKO1	0x59
 			>;
 		};
-	};
-};
-
-&i2c1 {
-	clock-frequency = <400000>;
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_i2c1>;
-	status = "okay";
-
-	pca9555:pca9555@20 {
-		compatible = "nxp,pca9555";
-		/* Role #0 */
-		gpio-controller;
-		#gpio-cells = <2>;
-		/* Bus address */
-		reg = <0x20>;
-	};
-
-	eeprom@54 {
-		compatible = "atmel,24c08";
-		reg = <0x54>;
-		pagesize = <16>;
 	};
 };
 
