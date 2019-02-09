@@ -32,4 +32,10 @@
 		#gpio-cells = <2>;
 		reg = <0x20>;
 	};
+
+	eeprom@54 {
+		compatible = "atmel,24c08";
+		reg = <0x54>;
+		pagesize = <16>;
+	};
 };
