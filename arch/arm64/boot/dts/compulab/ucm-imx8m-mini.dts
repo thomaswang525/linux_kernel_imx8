@@ -292,6 +292,12 @@
 				MX8MM_IOMUXC_GPIO1_IO02_WDOG1_WDOG_B		0xc6
 			>;
 		};
+
+		touchscreen_pins: tsgrp {
+			fsl,pins = <
+				MX8MM_IOMUXC_GPIO1_IO01_GPIO1_IO1		0x00
+			>;
+		};
 		/*
 		Copy & Paste from an MXP evk
 		As of now an external OSC1 25MHz is in use
@@ -517,6 +523,21 @@
 			};
 		};
 	};
+	goodix_ts@5d {
+		compatible = "goodix,gt911";
+		reg = <0x5d>;
+
+		interrupt-parent = <&gpio1>;
+		interrupts = <1 IRQ_TYPE_LEVEL_HIGH>;
+
+		pinctrl-names = "default";
+		pinctrl-0 = <&touchscreen_pins>;
+
+		irq-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&pca9555 4 GPIO_ACTIVE_HIGH>;
+		status = "okay";
+	};
+
 };
 
 &mipi_csi_1 {
