@@ -677,3 +677,18 @@
 	dr_mode = "host";
 	status = "okay";
 };
+
+&lcdif {
+	status = "okay";
+};
+
+&mipi_dsi {
+	status = "okay";
+	panel: panel@0 {
+		compatible = "startek,kd050hdfia020";
+		reg = <0>;
+		reset-gpio = <&pca9555 6 GPIO_ACTIVE_LOW>;
+		dsi-lanes = <4>;
+		status = "okay";
+	};
+};
