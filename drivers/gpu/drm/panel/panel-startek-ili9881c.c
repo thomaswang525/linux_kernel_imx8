@@ -28,7 +28,7 @@
 
 #define   LCD_XSIZE_TFT   720
 #define   LCD_YSIZE_TFT   1280
-#define   PCLOCK          80000
+#define   PCLOCK          62000
 #define   LCD_VBPD        20
 #define   LCD_VFPD        10
 #define   LCD_VSPW        10
