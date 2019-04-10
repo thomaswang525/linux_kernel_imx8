@@ -775,6 +775,8 @@
 	pinctrl-0 = <&pinctrl_usdhc3>;
 	pinctrl-1 = <&pinctrl_usdhc3_100mhz>;
 	pinctrl-2 = <&pinctrl_usdhc3_200mhz>;
+	no-1-8-v;
+	mmc-ddr-3_3v;
 	bus-width = <8>;
 	non-removable;
 	status = "okay";
