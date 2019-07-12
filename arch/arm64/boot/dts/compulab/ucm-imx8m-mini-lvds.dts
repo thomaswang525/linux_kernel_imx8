@@ -35,6 +35,10 @@
     status = "okay";
 };
 
+&panel {
+    status = "disabled";
+};
+
 &mipi_dsi {
     status = "okay";
     port@1 {
