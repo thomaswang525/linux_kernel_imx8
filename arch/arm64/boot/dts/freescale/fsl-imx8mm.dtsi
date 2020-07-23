@@ -758,7 +758,7 @@
 		status = "disabled";
 	};
 
-	sai5: sai@30050000 {
+	/*sai5: sai@30050000 {
 		compatible = "fsl,imx8mm-sai", "fsl,imx8mq-sai", "fsl,imx6sx-sai";
 		reg = <0x0 0x30050000 0x0 0x10000>;
 		interrupts = <GIC_SPI 90 IRQ_TYPE_LEVEL_HIGH>;
@@ -772,7 +772,7 @@
 		fsl,shared-interrupt;
 		fsl,dataline = <0 0xf 0xf>;
 		status = "disabled";
-	};
+	};*/
 
 	sai6: sai@30060000 {
 		compatible = "fsl,imx8mq-sai",

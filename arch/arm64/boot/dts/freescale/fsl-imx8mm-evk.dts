@@ -114,13 +114,13 @@
 		ak4458,pdn-gpio = <&pca6416 4 GPIO_ACTIVE_HIGH>;
 	};
 
-	sound-ak5558 {
+	/*sound-ak5558 {
 		compatible = "fsl,imx-audio-ak5558";
 		model = "ak5558-audio";
 		audio-cpu = <&sai5>;
 		audio-codec = <&ak5558>;
 		status = "disabled";
-	};
+	};*/
 
 	sound-ak4497 {
 		compatible = "fsl,imx-audio-ak4497";
@@ -138,11 +138,11 @@
 		spdif-in;
 	};
 
-	sound-micfil {
+/*	sound-micfil {
 		compatible = "fsl,imx-audio-micfil";
 		model = "imx-audio-micfil";
 		cpu-dai = <&micfil>;
-	};
+	}; */
 };
 
 &clk {
@@ -313,7 +313,7 @@
 			>;
 		};
 
-		pinctrl_sai5: sai5grp {
+	/*	pinctrl_sai5: sai5grp {
 			fsl,pins = <
 				MX8MM_IOMUXC_SAI5_MCLK_SAI5_MCLK	0xd6
 				MX8MM_IOMUXC_SAI5_RXC_SAI5_RX_BCLK	0xd6
@@ -335,7 +335,7 @@
 				MX8MM_IOMUXC_SAI5_RXD2_PDM_DATA2	0xd6
 				MX8MM_IOMUXC_SAI5_RXD3_PDM_DATA3	0xd6
 			>;
-		};
+		}; */
 
 		pinctrl_spdif1: spdif1grp {
 			fsl,pins = <
@@ -868,7 +868,7 @@
 	status = "okay";
 };
 
-&sai5 {
+/*&sai5 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_sai5>;
 	assigned-clocks = <&clk IMX8MM_CLK_SAI5_SRC>,
@@ -882,7 +882,7 @@
 	clock-names = "bus", "mclk0", "mclk1", "mclk2", "mclk3", "pll8k", "pll11k";
 	fsl,sai-asynchronous;
 	status = "disabled";
-};
+}; */
 
 &spdif1 {
 	pinctrl-names = "default";
@@ -1035,11 +1035,11 @@
 	status = "okay";
 };
 
-&micfil {
+/*&micfil {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_pdm>;
 	assigned-clocks = <&clk IMX8MM_CLK_PDM_SRC>, <&clk IMX8MM_CLK_PDM_DIV>;
 	assigned-clock-parents = <&clk IMX8MM_AUDIO_PLL1_OUT>;
 	assigned-clock-rates = <0>, <196608000>;
 	status = "okay";
-};
+}; */
