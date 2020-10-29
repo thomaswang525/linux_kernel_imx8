@@ -246,6 +246,13 @@
 				MX8MM_IOMUXC_UART1_TXD_UART1_DCE_TX	0x140
 			>;
 		};
+		
+		pinctrl_uart2: uart2grp {
+			fsl,pins = <
+                		MX8MM_IOMUXC_UART2_RXD_UART2_DCE_RX        0x00000116
+                		MX8MM_IOMUXC_UART2_TXD_UART2_DCE_TX        0x00000116
+            		>;
+		};
 
 		pinctrl_uart3: uart3grp {
 			fsl,pins = <
@@ -737,6 +744,12 @@
 	pinctrl-0 = <&pinctrl_uart1>;
 	assigned-clocks = <&clk IMX8MM_CLK_UART1_SRC>;
 	assigned-clock-parents = <&clk IMX8MM_SYS_PLL1_80M>;
+	status = "okay";
+};
+
+&uart2 { /* nrf52 */
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart2>;
 	status = "okay";
 };
 
